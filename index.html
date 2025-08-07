@@ -1,0 +1,27 @@
+<html>
+<head>
+   <tittle> One-Way Data Binding Example</tittle>
+   <script src=
+ "http://ajax.googleapis.com/ajax/libs/angular/1.6.9/angular.min.js">
+     </script> 
+   </head>
+   <body ng-app="myApp">
+    <h1>One-Way Data Binding Example</h1>
+       <div ng-controller="myCtrl">
+               <h1>{{tittle1}}</h1>
+               <h2>{{tittle2}}</h2>
+               <p>{{description}}</p>
+          </div>
+          <script type="text/javascript">
+             var app=angular.module("myApp",[]);
+             app.controller("myCtrl",function($scope) {
+                  $scope.tittle1="AngularJS";
+                  $scope.tittle2="AngularJS One-Way Data Binding";
+                  $scope.description="Data Binding refers"
+                         +"to the synchronization of data"
+                         +"between the model and view";
+             });
+           </script>
+          </body>
+          </html>              
+               
